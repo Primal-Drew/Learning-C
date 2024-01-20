@@ -5,6 +5,10 @@ int main()
     int a=3;
     int b=6;
     int c;
+    /*  (+)for additions
+        (/)for divisions
+        (*)for multiplication
+        (%)for modulus */
     c=a+b;
 
     printf("%d",c);
