@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int fibo(){
+long long int fibo(){
     int n;
     printf("Enter:");
     scanf("%d",&n);
