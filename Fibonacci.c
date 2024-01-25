@@ -1,10 +1,10 @@
-#include <stdio.h>
+0#include <stdio.h>
 
 long long int fibo(){
     int n;
     printf("Enter:");
     scanf("%d",&n);
-    int fibosqn[n];
+    long long int fibosqn[n];
         fibosqn[0]=0;
         fibosqn[1]=1;
     
@@ -25,7 +25,7 @@ long long int fibo(){
     }
 int main(){
     int exit;
-    int f = fibo();
+    long long int f = fibo();
     printf("%d",f);
 
     scanf("%d",&exit);
