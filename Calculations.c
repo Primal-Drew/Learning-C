@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
     // In c you must initialize the data type of a variable
