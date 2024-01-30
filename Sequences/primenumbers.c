@@ -1,32 +1,38 @@
 #include <stdio.h>
+#include <stdio.h>
 
-int prime(int num)
+int isPrime(int num)
 {
-    /*1.Takes user input number
-      2.Checks if number is either 1 or 0
-      3.Divides number by to get dividend 1 is prime_number
-      4.If any other number can divide   */ 
-    
-        if(num==0||num==1){
-            return 0;}
+    if (num <= 1)
+        return 0;
 
-     for (int i = 2;i<num;i++){
-            
-            if(num%i== 0){
-                printf("%d not a prime",num);
+    for (int i = 2; i < num; i++)
+    {
+        if (num % i == 0)
+            return 0;
+    }
+    return 1;
+}
 
-            }
-            else{
-                printf("Prime number\r  ");
-            }
-                
-            }
+void generatePrimes(int limit)
+{
+    int count = 0;
+    printf("Prime numbers up to %d:\n", limit);
+
+    for (int i = 2; i <= limit; i++)
+    {
+        if (isPrime(i))
+        {
+            printf("%d ", i);
+            count++;
         }
-
+    }
+    printf("\nTotal prime numbers found: %d\n", count);
+}
 
 int main()
 {
-    prime(10);
-
+    int limit = 10; 
+    generatePrimes(limit);
+    return 0;
 }
-
