@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int* int_array(int n)
+int *int_array(int n)
 {
     int *num;
-    num = (int*)malloc(100);
-    if(num==NULL){
+    num = (int *)malloc(100);
+    if (num == NULL)
+    {
         return NULL;
     }
 
@@ -24,13 +25,13 @@ int* int_array(int n)
 }
 
 int main()
-{   
-    int* list=int_array(6);
+{
+    int *list = int_array(6);
 
-    if(list==NULL){
+    if (list == NULL)
+    {
         exit(0);
     }
 
     free(list);
-
 }
