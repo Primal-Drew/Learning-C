@@ -1,23 +1,36 @@
 #include <stdio.h>
-int main()
+#include <stdlib.h>
+
+int* int_array(int n)
 {
-    int array[5];
-
-    for (int i = 0; i < 5; i++)
-    {
-        array[i] = i;
-        printf("Value:%d\n", array[i]);
+    int *num;
+    num = (int*)malloc(100);
+    if(num==NULL){
+        return NULL;
     }
-    printf("Adress:%p\n", array);
-    printf("Adress of array[0]:%p\n\n\n", &array[0]);
 
-    int *p = &array[1];
-    printf("Value is;%d , %d\n\n", *p, array[1]);
-
-    *array+1 = 10;
-
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < n; i++)
     {
-        printf("Value:%d\n", array[i]);
+
+        printf("%d Enter:", i);
+        scanf("%d", num + i);
     }
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d", *(num + i));
+    }
+
+    return num;
+}
+
+int main()
+{   
+    int* list=int_array(6);
+
+    if(list==NULL){
+        exit(0);
+    }
+
+    free(list);
+
 }
